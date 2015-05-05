@@ -1,0 +1,43 @@
+define(['animate', 'swiper', 'jgestures', 'imgpreload', 'initDom'], function(animate, Swiper, jQuery, imgpreload, initDom) {
+	//console.log(initDom.fontSize(100));
+//	var w_f=initDom.setFont({
+//		defaultSize: 100,
+//		onComplete:function(){
+//			document.getElementsByClassName("wrap")[0].style.display="block";
+//		}
+//	})
+//	console.log(w_f);
+	//initDom.fontSize();
+	$(function() {
+		//viewSet.resize(); //界面度量初始化
+
+
+		$("body img").imgpreload({
+			each: function() {
+				// callback invoked when each image is loaded
+				// this = dom image object
+				// check for success with: $(this).data('loaded')
+			},
+			all: showScene()
+		});
+	});
+	/*显示主场景*/
+	function showScene() {
+			$(".wrap_loading").hide();
+			$(".wrap_scene").show();
+			sliderInit();
+		}
+		/*swiper启动*/
+
+	function sliderInit() {
+
+		var mySwiper = new Swiper('.swiper-container', {
+			direction: 'vertical', //方向；vertical：垂直；horizontal：水平
+			loop: false, //是否循环
+			// 如果需要前进后退按钮
+			nextButton: '.swiper-button-next',
+			prevButton: '.swiper-button-prev',
+
+		})
+	}
+});
