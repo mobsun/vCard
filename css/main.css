@@ -19,6 +19,9 @@ body {
 	overflow: hidden;
 	/*	min-height: 7.05rem;*/
 }
+a,a:focus {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 .wrap {
 	height: 100%;
 	width: 100%;
