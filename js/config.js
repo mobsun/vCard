@@ -7,26 +7,30 @@ require.config({
 	//never includes a ".js" extension since
 	//the paths config could be for a directory.
 	baseUrl:"js",
+	enforceDefine:false,
 	paths: {
 		'windowSize':'app/windowSize',
 		'initDom':'app/initDom',
-		'jquery':'lib/jquery.min',
+		'jquery':['http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.3.min','lib/jquery.min'],
 		'jgestures':'lib/jgestures.min',
 		'imgpreload':'lib/jquery.imgpreload',
 		'swiper':'lib/swiper.min',
-		'TweenMax':'lib/TweenMax.min',
-		'viewSet':'app/viewSet',
+		'TweenLite':['http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenLite.min','lib/gsap/TweenLite.min'],
+		'CSSPlugin':['http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/plugins/CSSPlugin.min','lib/gsap/CSSPlugin.min'],
+		'EaselPlugin':['http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/easing/EasePack.min','lib/gsap/EaselPlugin.min'],
+		'TimelineLite':['http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TimelineLite.min','lib/gsap/TimelineLite.min'],
+		//'TweenLite':['lib/gsap/TweenLite.min'],
+		//'CSSPlugin':['lib/gsap/CSSPlugin.min'],
+		//'EaselPlugin':['lib/gsap/EaselPlugin.min'],
+		//'TimelineLite':['lib/gsap/TimelineLite.min'],
 		'animate':'app/animate',
 		'control':'app/control'
 	},
 	shim:{
-		
 		'imgpreload':['jquery'],
 		'jgestures':['jquery']
-		
-		//'weixin':['jweixin','jquery','fc']
 	},
 	urlArgs: "bust=" +  (new Date()).getTime(),
-	//waitSeconds: 60
+	waitSeconds: 30
 });
 require(['control'], function() {});

@@ -1,17 +1,5 @@
-define(['animate', 'swiper', 'jgestures', 'imgpreload', 'initDom'], function(animate, Swiper, jQuery, imgpreload, initDom) {
-	//console.log(initDom.fontSize(100));
-//	var w_f=initDom.setFont({
-//		defaultSize: 100,
-//		onComplete:function(){
-//			document.getElementsByClassName("wrap")[0].style.display="block";
-//		}
-//	})
-//	console.log(w_f);
-	//initDom.fontSize();
+define(['animate', 'swiper', 'jgestures', 'imgpreload'], function(animate, Swiper, jQuery, imgpreload) {
 	$(function() {
-		//viewSet.resize(); //界面度量初始化
-
-
 		$("body img").imgpreload({
 			each: function() {
 				// callback invoked when each image is loaded
@@ -30,13 +18,12 @@ define(['animate', 'swiper', 'jgestures', 'imgpreload', 'initDom'], function(ani
 		/*swiper启动*/
 
 	function sliderInit() {
-
 		var mySwiper = new Swiper('.swiper-container', {
 			direction: 'vertical', //方向；vertical：垂直；horizontal：水平
 			loop: false, //是否循环
 			// 如果需要前进后退按钮
 			nextButton: '.swiper-button-next',
-			prevButton: '.swiper-button-prev',
+			prevButton: '.swiper-button-prev'
 
 		})
 	}

@@ -30,7 +30,7 @@ input{
 	width: 100%;
 	position: relative;
 	overflow: hidden;
-	display: none;
+	display: block;
 }
 .fullWidth {
 	width: 100%;

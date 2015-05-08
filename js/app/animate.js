@@ -1,3 +1,3 @@
-define(['TweenMax'], function(TweenMax) {
-	
+define(['TweenLite','CSSPlugin','EaselPlugin','TimelineLite'], function() {
+	console.log(TweenLite);
 });
